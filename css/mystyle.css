@@ -1,0 +1,162 @@
+
+.home-img{
+  width: 300px;
+}
+.panel-left{
+  float: left;
+}
+
+.panel-right{
+  float: right;
+  margin-right: 70px;
+  margin-top: 15px;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.table td, .table th {
+	text-align: center;   
+}
+
+.win
+{
+	background-color: #DFF0D8;
+}
+
+.lose
+{
+	background-color: #F2DEDE;
+}
+
+.draw
+{
+	background-color: #D9EDF7;
+}
+
+.chart {
+  border-left: 2px solid #D8D8D8;
+  border-bottom: 2px solid #D8D8D8;
+  margin: 60px auto;
+  position: relative;
+  opacity: 0.9;
+  background-color: #fff;
+}
+
+.y {
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  bottom: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.x {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 5px;
+  display: none;
+}
+
+.bar {
+  background: #3073AD;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  z-index: 0;
+}
+
+.bar-label{
+  position: absolute;
+  width: 100%;
+  bottom: -50px;
+  font-size: 12px;
+  color: red;
+  transform:rotate(-15deg);
+  background-color: #fff;
+}
+
+.bar:hover > .bar-value{
+  display: block;
+}
+
+.bar-value{
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: -30px;
+  font-size: 10px;
+  color: red;
+}
+
+/* za sakrivanje podataka u rasporedu ako se utakmica nije igrala  */
+.notdisp{
+  opacity: 0;
+}
+
+.chart{
+  margin-bottom: 200px;
+}
+
+.fixturesminibar{
+  background: rgb(144, 237, 125);
+  position: absolute;
+  z-index: 0;
+}
+
+
+.fixtures-chart{
+  position: relative;
+  border-left: 2px solid #D8D8D8;
+  border-bottom: 2px solid #D8D8D8;
+  margin: 60px auto;
+}
+.fixtures-y{
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  bottom: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.fixtures-x{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 5px;
+  display: none;
+}
+
+.fixtureminibarvalue
+{
+  color: red;
+  font-weight: bold;
+  float: right;
+  vertical-align: middle;
+}
+
+body{
+   background: url(../images/background1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.teams-squad
+{
+  text-transform: uppercase;
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+}
+
+table{ background-color: #fff;}

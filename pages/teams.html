@@ -1,0 +1,35 @@
+   
+    <h3 class="teams-squad"><center>Squad market values - Gaphical display</center></h3>
+    <div class="chart" style="width:{{width}}px; height:{{height}}px;">
+      <!-- Labels -->
+      <div class="y" style="width:{{height}}px;">{{ max | currency:"€"}}</div>
+      <div class="x">{{xAxis}}</div>
+      <!-- Data -->
+       <div ng-repeat="team in teams" class="bar" style="height:{{currency_to_numb(team.squadMarketValue) / max * height}}px; width:{{width / teams.length - 15}}px; left:{{$index / teams.length * width}}px;"><span class="bar-value">{{team.squadMarketValue}}</span></div>
+
+       <div ng-repeat="team in teams" class="bar-label" style="left:{{$index / teams.length * width}}px; width:{{width / teams.length - 5}}px;">{{ team.name }}</div>
+
+     </div>
+<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div ng-repeat="team in teams">
+				<div class="panel panel-primary">
+				  <div class="panel-heading">{{team.name}}</div>
+				  <div class="panel-body">
+				  	<div class="pull-left" style="margin-right:30px;">
+				  		<img src="{{ team.crestUrl }}" alt="{{ team.code }}" class="img-thumbnail" style="width: 140px; height: 140px;">
+				  	</div>
+				  	<div style="margin-left: 15px;">
+				  			
+						    Team name: {{team.shortName}}
+						    <hr>
+						    Squad market value: {{team.squadMarketValue}}
+
+						    <hr>
+						    <a href="#/players/{{ get_team_id(team._links.self.href) }}"> See players </a> | <a href="#/teamfixtures/{{ get_team_id(team._links.self.href) }}">See fixtures</a>
+				  	</div>
+				  </div>
+				</div>	
+			</div>
+	</div>
+</div>

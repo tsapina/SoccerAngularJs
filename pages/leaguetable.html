@@ -1,0 +1,31 @@
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<table class="table table-hover table-bordered">
+		    <thead>
+		      <tr>
+		      	<th>Position</th>
+		      	<th>Team name</th>
+		        <th>Goal Difference</th>
+		        <th>Goals</th>
+		        <th>Goals against</th>
+		        <th>Played Games:</th>
+		        <th>Points</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		    	<h1>{{ error }}</h1>
+		      <tr ng-repeat="row in LeagueTable" 
+		      ng-class="$index == 0 ? 'win' : ($index+1 > LeagueTable.length-3 ?  'lose' : '')">
+			        <td>{{ row.position }}</td>
+			        <td>{{ row.teamName }}</td>
+			        <td>{{ row.goalDifference }}</td>
+			        <td>{{ row.goals }}</td>
+			        <td>{{ row.goalsAgainst }}</td>
+			        <td>{{ row.playedGames }}</td>
+			        <td>{{ row.points }}</td>
+		      </tr>
+		 	</tbody>
+		  </table>
+	</div>
+</div>

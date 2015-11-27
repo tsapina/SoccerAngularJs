@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="soccerApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Soccer app</title>
+	<script src="js/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/mystyle.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-route.min.js"></script>
+	<script src="angular/angular-resource.min.js"></script>
+
+
+	<script src="module/app.js"></script> 
+	<script src="routes.js"></script>
+	<script src="services.js"></script>
+	<script src="controllers/home.js"></script>
+	<script src="controllers/teams.js"></script>
+	<script src="controllers/fixturesall.js"></script>
+	<script src="controllers/leaguetable.js"></script>
+	<script src="controllers/players.js"></script>
+	<script src="controllers/teamfixtures.js"></script>
+	<script src="directives/directives.js"></script>
+		
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">soccerApp</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#/">Home</a></li>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+  	
+   <div ng-view></div>
+	
+</body>
+</html>

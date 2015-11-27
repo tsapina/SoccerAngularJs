@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="well well-lg">
+			Aplikacija je nastala kao projekt na prvoj godini diplomskog studija  na kolegiju Vizualizacija podataka na <a href="http://www.etfos.unios.hr/" target="_blank">Elektrotehničkom fakultetu</a> u Osijeku.Omogućava pregled  nogometnih liga po sezonama , pregled klubova po ligama, pregled igraća po klubovima, pregled rasporeda utakmica i rezultata...
+			Za izradu je korišten javascript framework <a href="https://angularjs.org/" target="_blank">Angular JS </a> koji omogućuje izradu SPA (Single Page Application) aplikacija.  Svi podaci su preuzeti putem Api-a sa <a href="http://api.football-data.org/index" target="_blank"> api.football-data.org </a>. Aplikaciju izradili Tomislav Šapina i Marko Zetović.
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="well well-lg">
+			<h3><u>Choose season:</u></h3>
+
+			<select  ng-model="getseason" class="form-control" ng-options="season  as 'Season '+ season + '/' + seasonaddone(season)  for season in seasons"></select>
+			
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div ng-repeat="league in leagues">
+				<div class="panel panel-primary">
+			  		<div class="panel-heading">{{league.caption}}</div>
+			 		 	<div class="panel-body">
+			 		 		<div class="panel-body-up  clearfix">
+			 		 			<div class="panel-left">
+			 		 			<img class="img-responsive img-thumbnail home-img" src="images/{{league.league}}.gif" alt="">
+			    			
+				 		 		</div>
+				 		 		<div class="panel-right ">
+				 		 			<hr>
+				 		 			Number of teams: {{league.numberOfTeams}}
+				 		 			<hr>
+				 		 			Number of games: {{league.numberOfGames}}
+				 		 			<hr>
+				 		 		</div>
+			 		 		</div>
+			 		 		
+						   
+						    
+						    <hr>
+						    <a href="#/teams/{{ leagueKey(league._links.self.href) }}">See teams</a> | <a href="#/fixtures/{{ leagueKey(league._links.self.href) }}">See Fixtures</a> | <a href="#/leaguetable/{{ leagueKey(league._links.self.href) }}">League table</a>
+						    {{teamKeyStart}}
+						 </div>
+				</div>	
+		</div>
+	</div>
+</div>
